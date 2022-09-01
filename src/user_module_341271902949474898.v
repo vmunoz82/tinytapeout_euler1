@@ -12,14 +12,14 @@ module user_module_341271902949474898(io_out, io_in);
   wire [4:0] \$23 ;
   wire \$25 ;
   wire \$27 ;
-  wire [12:0] \$29 ;
+  wire [10:0] \$29 ;
   wire [5:0] \$3 ;
-  wire [12:0] \$30 ;
-  wire [11:0] \$32 ;
-  wire [11:0] \$33 ;
+  wire [10:0] \$30 ;
+  wire [10:0] \$32 ;
+  wire [10:0] \$33 ;
   wire [19:0] \$35 ;
   wire [18:0] \$36 ;
-  wire [11:0] \$38 ;
+  wire [9:0] \$38 ;
   wire \$39 ;
   wire \$4 ;
   wire [19:0] \$42 ;
@@ -27,11 +27,11 @@ module user_module_341271902949474898(io_out, io_in);
   wire \$45 ;
   wire [5:0] \$7 ;
   wire \$8 ;
-  reg [10:0] c3 = 11'h000;
-  reg [10:0] \c3$next ;
+  reg [9:0] c3 = 10'h000;
+  reg [9:0] \c3$next ;
   wire c3_lt_1000;
-  reg [11:0] c5 = 12'h000;
-  reg [11:0] \c5$next ;
+  reg [9:0] c5 = 10'h000;
+  reg [9:0] \c5$next ;
   wire c5_lt_1000;
   input [7:0] io_in;
   wire [7:0] io_in;
@@ -61,7 +61,7 @@ module user_module_341271902949474898(io_out, io_in);
   assign \$33  = c3 + 2'h3;
   assign \$36  = result + c3;
   assign \$39  = v5 & c5_lt_1000;
-  assign \$38  = \$39  ? c5 : 12'h000;
+  assign \$38  = \$39  ? c5 : 10'h000;
   assign \$42  = \$36  + \$38 ;
   assign \$45  = v5 | c5_lt_1000;
   assign \$44  = ~ \$45 ;
@@ -98,11 +98,11 @@ module user_module_341271902949474898(io_out, io_in);
     \c5$next  = c5;
     casez (\$27 )
       1'h1:
-          \c5$next  = \$30 [11:0];
+          \c5$next  = \$30 [9:0];
     endcase
     casez (tiny_rst)
       1'h1:
-          \c5$next  = 12'h000;
+          \c5$next  = 10'h000;
     endcase
   end
   always @* begin
@@ -110,11 +110,11 @@ module user_module_341271902949474898(io_out, io_in);
     \c3$next  = c3;
     casez (c3_lt_1000)
       1'h1:
-          \c3$next  = \$33 [10:0];
+          \c3$next  = \$33 [9:0];
     endcase
     casez (tiny_rst)
       1'h1:
-          \c3$next  = 11'h000;
+          \c3$next  = 10'h000;
     endcase
   end
   always @* begin
