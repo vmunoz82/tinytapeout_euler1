@@ -52,7 +52,7 @@ module user_module_341271902949474898_tb;
             for (j = 0; j < 600; j += 1) begin
                 if (valid == 1)
                 begin
-                    $display("valid at cycle #%0d", i);
+                    $display("valid at cycle #%0d", j);
                     j = 600; /* break */
                 end
                 #(TCLK);
